@@ -1,0 +1,35 @@
+Rachels-MacBook-Pro:queries rachelsandquist$ cd ..
+Rachels-MacBook-Pro:datta rachelsandquist$ cd .. 
+Rachels-MacBook-Pro:coral_immunogenomics rachelsandquist$ ls
+bash	data	output
+Rachels-MacBook-Pro:coral_immunogenomics rachelsandquist$ cd data
+Rachels-MacBook-Pro:data rachelsandquist$ ls
+proteoms	queries
+Rachels-MacBook-Pro:data rachelsandquist$ cd proteoms
+Rachels-MacBook-Pro:proteoms rachelsandquist$ ls
+Acropora tenuis						Galaxy37-[Apalm_assembly_v2.0_180910.protein.fa].fasta
+Fungia spp.						Goniastrea aspera
+GCF_000004095.1_Hydra_RP_1.0_protein.faa		Montipora capitata
+GCF_000090795.1_v1.0_protein.faa			Porites lutea
+GCF_000209225.1_ASM20922v1_protein.faa			cnidarian_blastdb.pdb
+GCF_000222465.1_Adig_1.1_protein.faa			cnidarian_blastdb.phr
+GCF_001417965.1_Aiptasia_genome_1.1_protein.faa		cnidarian_blastdb.pin
+GCF_002042975.1_ofav_dov_v1_protein.faa			cnidarian_blastdb.pot
+GCF_002571385.1_Stylophora_pistillata_v1_protein.faa	cnidarian_blastdb.psq
+GCF_004143615.1_amil_sf_1.1_protein.faa			cnidarian_blastdb.ptf
+GCF_004324835.1_DenGig_1.0_protein.faa			cnidarian_blastdb.pto
+Galaxea fascicularis					cnidarian_prot_db.fasta
+Galaxy32-[Acerv_assembly_v1.0.protein.fa].fasta
+Rachels-MacBook-Pro:proteoms rachelsandquist$ cd ../queries
+Rachels-MacBook-Pro:queries rachelsandquist$ ls
+TIR_Query.fasta
+Rachels-MacBook-Pro:queries rachelsandquist$ blastp -query TIR_Query.fasta -db cnidarian_prot_db.fasta -out TIR_blast
+BLAST Database error: No alias or index file found for protein database [cnidarian_prot_db.fasta] in search path [/Users/rachelsandquist/coral_immunogenomics/data/queries::]
+Rachels-MacBook-Pro:queries rachelsandquist$ 
+Rachels-MacBook-Pro:queries rachelsandquist$ cd ..
+Rachels-MacBook-Pro:data rachelsandquist$ cd ..
+Rachels-MacBook-Pro:coral_immunogenomics rachelsandquist$ blastp -query TIR_Query.fasta -db cnidarian_prot_db.fasta -out TIR_blast
+Command line argument error: Argument "query". File is not accessible:  `TIR_Query.fasta'
+Rachels-MacBook-Pro:coral_immunogenomics rachelsandquist$ 
+Rachels-MacBook-Pro:coral_immunogenomics rachelsandquist$ 
+
